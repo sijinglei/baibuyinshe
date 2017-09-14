@@ -136,3 +136,9 @@
 .what-color span {
     width: 40px;
 }
+
+.success-text {
+    font-size: 14px;
+    color: #666666;
+    line-height: 28px;
+}

@@ -15,10 +15,10 @@ var indexPage = {
         });
         //
         $('.btn-moveright').on('click', function() {
-            $(this).closest('.page-wrpa').find('.page-form').addClass('on');
+            $(this).closest('.page-wrpa').addClass('on');
         });
         $('.btn-cirle').on('click', function() {
-            $(this).closest('.page-wrpa').find('.page-form').removeClass('on');
+            $(this).closest('.page-wrpa').removeClass('on');
         });
         $('.point').on('click', function() {
             $.fn.fullpage.moveSectionDown();

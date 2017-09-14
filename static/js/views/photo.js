@@ -1,8 +1,21 @@
 $(function() {
     //初始化
-    photo.init();
-    file.init();
+    common.init();
 });
+
+var common = {
+    init: function() {
+        photo.init();
+        file.init();
+        this.bindEvent();
+    },
+    bindEvent: function() {
+        $('.btn-ok').on('click', function() {
+
+            window.location.href = '/success.html';
+        });
+    }
+}
 
 var photo = {
     init: function() {
