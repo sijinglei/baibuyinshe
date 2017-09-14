@@ -1,0 +1,56 @@
+@charset"utf-8";
+
+/**
+ * author       :   Richa
+ * date         :   2015-11-03
+ * description  :   分页组件样式
+ */
+
+.t-paginator {
+    text-align: right;
+    color: #666;
+    font-size: 14px;
+}
+
+.t-paginator.t-hide {
+    display: none;
+}
+
+.t-paginator a, .t-paginator .t-current {
+    display: inline-block;
+    color: #666;
+    margin: 0 5px;
+    padding: 6px 10px;
+    text-align:center;
+    vertical-align: baseline;
+    background-color: #FFF;
+    border: 1px solid #CCC;
+}
+.t-paginator .t-current ,.t-paginator  .t-page-num{
+    min-width: 36px
+}
+
+.t-paginator .t-current {
+    background-color: #329BFF;
+    color: #fff;
+    border: 1px solid #329BFF;
+}
+
+.t-paginator a:hover {
+    background-color: #eee;
+}
+
+.t-paginator a.t-disabled {
+    color: #999;
+    cursor: not-allowed;
+}
+
+.t-paginator a.t-disabled:hover {
+   background-color: #ddd;
+}
+
+.t-paginator .t-paginator-dot {
+    display: inline-block;
+    font-size: 20px;
+    margin: 0 5px;
+}

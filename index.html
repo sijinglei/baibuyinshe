@@ -1,35 +1,319 @@
 <!DOCTYPE html>
-<html>
-
-
-<!-- Mirrored from www.zi-han.net/theme/hplus/ by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 20 Jan 2016 14:16:41 GMT -->
+<html lang="en">
 
 <head>
-    <meta charset="utf-8">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="renderer" content="webkit">
-    <meta http-equiv="Cache-Control" content="no-siteapp" />
-    <title>主页</title>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>首页</title>
+    <link rel="stylesheet" href="static/css/reset.css">
+    <link rel="stylesheet" href="static/css/button.css">
+    <link rel="stylesheet" href="static/css/table.css">
+    <link rel="stylesheet" href="static/css/common.css">
+    <link rel="stylesheet" href="static/js/plugins/fullPage/jquery.fullPage.css">
+    <link rel="stylesheet" href="static/js/plugins/select2/css/select2.min.css">
 
-    <meta name="keywords" content="">
-    <meta name="description" content="">
+    <link rel="stylesheet" href="static/css/views/index.css">
+    <style>
 
-    <!--[if lt IE 9]>
-    <meta http-equiv="refresh" content="0;ie.html" />
-    <![endif]-->
-
-    <link rel="shortcut icon" href="favicon.ico">
+    </style>
 </head>
 
-<body class="">
-    <h1>首页</h1>
-    <script src="/js/plugins/require.min.js"></script>
-    <script src="/js/config.js"></script>
-    <script>
-        require(['views/index']);
-    </script>
+<body>
+    <!--内页导航-->
+    <header class="topbar-wrap fixed-head">
+        <input type="hidden" id="hiddenHeader">
+        <input type="hidden" id="isAdmin" value="">
+        <div class="topbar ">
+            <div class="topbar-head ">
+                <div class="w-1080">
+                    <a href="javascript:;" class="logo">
+                        <img src="static/images/logo2.png">
+                    </a>
+                    <nav class="menu">
+                        <a href="/login.html">登录</a>
+                        <i class="line"></i>
+                        <a href="/register.html">注册</a>
+                        <i class="line"></i>
+                        <a class="code-img" href="javascript:;">
+                            <img src="static/images/02.png" alt="">
+                        </a>
+                        <!-- <div class="t-dropdown" id="msg-channel" data-mode="2">
+                            <a href="/person" class="t-dropdown-btn"><span>我的</span><i class="icon icon-arrow_triangle_down"></i></a>
+                            <nav class="t-dropdown-content">
+                                <a href="/person#/msg">个人中心</a>
+                                <a href="/person#/rePass">修改密码</a>
+                                <a href="/logOut">退出登录<span class="iconfont icon-tuichudenglu"></span></a>
+                            </nav>
+                        </div> -->
+                    </nav>
+                </div>
+            </div>
+
+            <div class="topbar-navbar">
+                <div class="w-1080 clearfix">
+                    <nav class="navs">
+                        <a href="/file.html" class="actived">文档打印</a>
+                        <a href="/photos.html">相片打印</a>
+                        <a href="/down/index.html">下载中心</a>
+                        <a href="#">印社地图</a>
+                        <a href="#">用户指南</a>
+                        <a href="#">商务合作</a>
+                        <a href="/user/index.html">个人中心</a>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
 
 
+    <div class="container">
+        <div class="w-1080">
+            <div id="fullpage">
+                <div class="section page-1">
+                    <div class="page-wrpa">
+                        <div class="slide">
+                            <div class="btn-wrap">
+                                <a href="javascript:;" class="btn btn-default btn-moveright">查找附近打印设备</a>
+                                <p class="text">在上传文件前，确定你将要取件的打印设备该设备会预先准备好文件，减少取件的时间。</p>
+                                <p class="point"><span></span></p>
+                            </div>
+                        </div>
+                        <div class="page-form">
+                            <div class="left-wrap fl">
+                                <img class="top-img" src="static/images/47.png" alt="">
+                                <div class="tab-bar">
+                                    <a href="javascript:;" class="actived">
+                                        <i class="fa fa-fujin"></i> 附近设备
+                                    </a>
+                                    <i class="line"></i>
+                                    <a href="javascript:;">
+                                        <i class="fa fa-cy"></i> 常用设备
+                                    </a>
+                                    <i class="line"></i>
+                                    <a href="javascript:;">
+                                        <i class="fa fa-map"></i> 地图查找
+                                    </a>
+                                </div>
+                                <div class="page-content">
+                                    <div class="input-group">
+                                        <input type="text" class="form-control">
+                                        <i class="line"></i>
+                                        <select class="t-select" name="" id="areaId">
+                                            <option value="1">深圳</option>
+                                            <option value="1">广州</option>
+                                            <option value="1">东莞</option>
+                                        </select>
+                                        <a href="javascript:;" class="search"><i class="fa-search"></i></a>
+                                    </div>
+                                    <div class="row">
+                                        <p class="title">附近设备</p>
+                                        <div class="equipment-list">
+                                            <ul>
+                                                <li>
+                                                    <div class="col-2 fl ">
+                                                        粤海大厦腾讯大厦
+                                                    </div>
+                                                    <div class="col-4 fl">
+                                                        广东省深圳市宝安区新安街道45区自由…
+                                                    </div>
+                                                    <div class="col-2 fl">
+                                                        <i class="fa fa-file"></i>可用纸张350张
+                                                    </div>
+                                                    <div class="col-2 fl">
+                                                        <i class="fa fa-fileimg"></i>可用相纸450张
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="col-2 fl ">
+                                                        粤海大厦腾讯大厦
+                                                    </div>
+                                                    <div class="col-4 fl">
+                                                        广东省深圳市宝安区新安街道45区自由…
+                                                    </div>
+                                                    <div class="col-2 fl">
+                                                        <i class="fa fa-waing"></i>可用纸张350张
+                                                    </div>
+                                                    <div class="col-2 fl">
+                                                        <i class="fa fa-fileimg"></i>可用相纸450张
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="col-2 fl ">
+                                                        粤海大厦腾讯大厦
+                                                    </div>
+                                                    <div class="col-4 fl">
+                                                        广东省深圳市宝安区新安街道45区自由…
+                                                    </div>
+                                                    <div class="col-2 fl">
+                                                        <i class="fa fa-file"></i>可用纸张350张
+                                                    </div>
+                                                    <div class="col-2 fl">
+                                                        <i class="fa fa-fileimg"></i>可用相纸450张
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="col-2 fl ">
+                                                        粤海大厦腾讯大厦
+                                                    </div>
+                                                    <div class="col-4 fl">
+                                                        广东省深圳市宝安区新安街道45区自由…
+                                                    </div>
+                                                    <div class="col-2 fl">
+                                                        <i class="fa fa-waing"></i>可用纸张350张
+                                                    </div>
+                                                    <div class="col-2 fl">
+                                                        <i class="fa fa-fileimg"></i>可用相纸450张
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="col-2 fl ">
+                                                        粤海大厦腾讯大厦
+                                                    </div>
+                                                    <div class="col-4 fl">
+                                                        广东省深圳市宝安区新安街道45区自由…
+                                                    </div>
+                                                    <div class="col-2 fl">
+                                                        <i class="fa fa-file"></i>可用纸张350张
+                                                    </div>
+                                                    <div class="col-2 fl">
+                                                        <i class="fa fa-fileimg"></i>可用相纸450张
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="col-2 fl ">
+                                                        粤海大厦腾讯大厦
+                                                    </div>
+                                                    <div class="col-4 fl">
+                                                        广东省深圳市宝安区新安街道45区自由…
+                                                    </div>
+                                                    <div class="col-2 fl">
+                                                        <i class="fa fa-waing"></i>可用纸张350张
+                                                    </div>
+                                                    <div class="col-2 fl">
+                                                        <i class="fa fa-fileimg"></i>可用相纸450张
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="col-2 fl ">
+                                                        粤海大厦腾讯大厦
+                                                    </div>
+                                                    <div class="col-4 fl">
+                                                        广东省深圳市宝安区新安街道45区自由…
+                                                    </div>
+                                                    <div class="col-2 fl">
+                                                        <i class="fa fa-file"></i>可用纸张350张
+                                                    </div>
+                                                    <div class="col-2 fl">
+                                                        <i class="fa fa-fileimg"></i>可用相纸450张
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="col-2 fl ">
+                                                        粤海大厦腾讯大厦
+                                                    </div>
+                                                    <div class="col-4 fl">
+                                                        广东省深圳市宝安区新安街道45区自由…
+                                                    </div>
+                                                    <div class="col-2 fl">
+                                                        <i class="fa fa-waing"></i>可用纸张350张
+                                                    </div>
+                                                    <div class="col-2 fl">
+                                                        <i class="fa fa-fileimg"></i>可用相纸450张
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <p class="text-center">
+                                            <a href="JavaScript:;" class="btn-step">下一步</a>
+                                        </p>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                            <img src="static/images/48.png" class="right-bg" alt="">
+                            <a href="javascript:;" class="btn-cirle"></a>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="section page-2">
+                    <div class="page-wrpa">
+                        <div class="btn-wrap">
+                            <a href="javascript:;" class="btn btn-default btn-moveright">点击上传文档</a>
+                            <p class="text">文档上传支持doc,docx,xls,xlsx,ppt,pptx,jpg,png,jpeg格式，更多问题点击此处查看帮助。</p>
+                        </div>
+                        <div class="page-form">
+                            <div class="left-wrap fl">
+                                <img class="top-img" src="static/images/50.png" alt="">
+
+                                <div class="page-content">
+                                    <table class="table table-bordered">
+                                        <thead>
+                                            <tr>
+                                                <th>序号</th>
+                                                <th>文档名称</th>
+                                                <th>单双面</th>
+                                                <th>颜色</th>
+                                                <th>打印范围</th>
+                                                <th>打印份数</th>
+                                                <th>纸张数</th>
+                                                <th>金额</th>
+                                                <th>操作</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>1</td>
+                                                <td>2</td>
+                                                <td>3</td>
+                                                <td>4</td>
+                                                <td>5</td>
+                                                <td>6</td>
+                                                <td>7</td>
+                                                <td>8</td>
+                                                <td>9</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+
+                            </div>
+                            <img src="static/images/51.png" class="right-bg" alt="">
+                            <a href="javascript:;" class="btn-cirle"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="main-ft fixed-foot" id="main-ft">
+        <div class="inner w-1080">
+            <div class="contact">
+                <div class="imglist">
+                    <a href=""><img src="static/images/18.png" alt=""></a>
+                    <a href=""><img src="static/images/19.png" alt=""></a>
+                    <a href=""><img src="static/images/20.png" alt=""></a>
+                </div>
+                <div class="links">
+                    <a target="_blank" href="https://www.bbys.com">百步印社</a>
+                    <span>联系电话：13510211086</span>
+                </div>
+            </div>
+            <div class="links copyright">
+                <span>版权所有 © 2017-2017 百步印社</span>&nbsp;
+                <a target="_blank" href="http://www.miibeian.gov.cn">粤ICP 备xxxx号</a>
+            </div>
+
+
+        </div>
+    </footer>
+    <script src="static/js/jquery.min.js"></script>
+    <script src="static/js/plugins/fullPage/jquery.fullPage.min.js"></script>
+    <script src="static/js/plugins/select2/js/select2.full.min.js"></script>
+    <script src="static/js/views/index.js"></script>
 </body>
 
 </html>
