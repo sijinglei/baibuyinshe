@@ -1,0 +1,336 @@
+/*====== Button ========*/
+
+button[type="button"] {
+    border: none;
+}
+
+.btn,
+.label {
+    display: inline-block;
+    text-align: center;
+    min-width: 48px;
+    padding: 6px 20px;
+    line-height: 20px;
+    background: #EEE;
+    color: #666;
+    border-radius: 2px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-family: "Ping Fang SC", "STHeiTi", "arial", "Microsoft YaHei", "SimSun", "Georgia", "Times", "Times New Roman", "serif";
+    font-size: 1.4rem;
+    white-space: nowrap;
+    -webkit-transition: all .2s ease;
+    -moz-transition: all .2s ease;
+    transition: all .2s ease;
+    box-sizing: content-box;
+}
+
+input[type='file'].btn {
+    width: 100px;
+    background-color: transparent;
+}
+
+.btn:hover {
+    background-color: #E2DEDE;
+}
+
+.btn.btn-mini,
+.label.label-mini {
+    min-width: auto;
+    padding: 3px 10px;
+}
+
+.btn.btn-large,
+.label.label-large {
+    min-width: auto;
+    padding: 10px 48px;
+    font-size: 1.6rem;
+}
+
+.btn.btn-disabled,
+.btn.btn-disabled:hover {
+    color: #BDBDBD;
+    background: #EEE;
+    cursor: not-allowed;
+}
+
+.label-gray,
+.label-gray:hover {
+    background: #E4E4E4;
+}
+
+.btn-primary,
+.label-primary {
+    background: #00AAFF;
+    color: #fff;
+}
+
+.btn-primary:hover {
+    background: #0078E2;
+}
+
+.btn-primary-border {
+    padding: 5px 20px;
+    background: none;
+    border: 1px solid #0AF;
+    color: #0AF;
+}
+
+.btn-primary-border:hover {
+    background: rgba(50, 155, 255, .16);
+}
+
+.btn-success,
+.label-success {
+    background: rgba(48, 200, 200, 1);
+    color: #fff;
+}
+
+.btn-success:hover {
+    background: rgba(28, 180, 180, 1);
+}
+
+.btn-success-border {
+    padding: 5px 20px;
+    background: none;
+    border: 1px solid rgba(48, 200, 200, 1);
+    color: rgba(48, 200, 200, 1);
+}
+
+.btn-success-border:hover {
+    background: rgba(48, 200, 200, .16);
+}
+
+.btn-large.btn-primary-border,
+.btn-large.btn-success-border,
+.btn-large.btn-warning-border,
+.btn-large.btn-danger-border,
+.btn-large.btn-violet-border,
+.btn-large.btn-grey-border {
+    padding: 9px 46px;
+}
+
+.btn-warning,
+.label-warning {
+    background: rgba(243, 210, 97, 1);
+    color: #fff;
+}
+
+.btn-warning:hover {
+    background: rgba(237, 201, 21, 1);
+}
+
+.btn-warning-border {
+    padding: 5px 20px;
+    background: none;
+    border: 1px solid rgba(243, 210, 97, 1);
+    color: rgba(243, 210, 97, 1);
+}
+
+.btn-warning-border:hover {
+    background: rgba(243, 210, 97, .16);
+}
+
+.btn-danger,
+.label-danger {
+    background: #FD6957;
+    color: #fff;
+}
+
+.btn-danger:hover {
+    background: #F14D39;
+}
+
+.btn-danger-border {
+    padding: 5px 20px;
+    background: none;
+    border: 1px solid rgba(255, 153, 153, 1);
+    color: rgba(255, 153, 153, 1);
+}
+
+.btn-danger-border:hover {
+    background: rgba(255, 153, 153, .16);
+}
+
+.btn-violet,
+.label-violet {
+    background: rgba(128, 137, 193, 1);
+    color: #fff;
+}
+
+.btn-violet:hover {
+    background: rgba(113, 121, 175, 1);
+}
+
+.btn-violet-border {
+    padding: 5px 20px;
+    background: none;
+    border: 1px solid rgba(128, 137, 193, 1);
+    color: rgba(128, 137, 193, 1);
+}
+
+.btn-violet-border:hover {
+    background: rgba(128, 137, 193, .16);
+}
+
+.btn-grey,
+.label-grey {
+    background: rgba(102, 102, 102, 1);
+    color: #fff;
+}
+
+.btn-grey:hover {
+    background: rgba(90, 90, 90, 1);
+}
+
+.btn-grey-border {
+    padding: 5px 20px;
+    background: none;
+    border: 1px solid rgba(102, 102, 102, 1);
+    color: rgba(102, 102, 102, 1);
+}
+
+.btn-grey-border:hover {
+    background: rgba(102, 102, 102, .16);
+}
+
+.btn-white {
+    background: rgba(255, 255, 255, 1);
+    color: #666;
+}
+
+.btn-white:hover {
+    background: rgba(255, 255, 255, .8);
+}
+
+.btn.btn-block {
+    padding: 10px;
+    display: block;
+    text-align: center;
+    font-size: 1.6rem;
+}
+
+
+/* 方形按钮 begin*/
+
+.btn.btn-square {
+    min-width: auto;
+    width: 32px;
+    height: 32px;
+    padding: 0;
+    line-height: 32px;
+}
+
+.btn.btn-square.btn-mini {
+    width: 25px;
+    height: 25px;
+    line-height: 25px;
+}
+
+.btn.btn-square .icon {
+    margin-right: 0;
+}
+
+
+/* 方形按钮 end*/
+
+
+/* 含ICON的按钮 begin*/
+
+.btn .icon {
+    display: inline-block;
+    margin-right: 5px;
+}
+
+.btn .icon,
+.btn span {
+    vertical-align: middle;
+    line-height: 0;
+}
+
+.icon.font-16 {
+    font-size: 16px;
+}
+
+.icon.font-24 {
+    font-size: 24px;
+}
+
+
+/* 含ICON的按钮 end*/
+
+
+/* 圆角 begin*/
+
+.btn-radius,
+.btn-radius-4 {
+    border-radius: 4px;
+}
+
+.btn-raduis-16,
+.btn-radius-16 {
+    border-radius: 16px;
+}
+
+.btn-raduis-20 {
+    border-radius: 20px;
+}
+
+.btn-radius-50 {
+    border-radius: 50%;
+}
+
+
+/* 圆角 end*/
+
+.btn-groud {
+    margin-top: 10px;
+}
+
+.btn-groud .btn {
+    margin: 5px;
+}
+
+.btnSmall {
+    padding: 2px 8px;
+    vertical-align: middle;
+}
+
+.btn-withicon {
+    border-radius: 4px;
+}
+
+.btn-withicon .icon {
+    font-size: 24px;
+    vertical-align: middle;
+    margin-right: 4px;
+}
+
+.btn-withicon span {
+    vertical-align: middle;
+}
+
+.btn-withicon-large {
+    font-size: 16px;
+    border-radius: 4px;
+    padding: 0 25px;
+    height: 48px;
+    line-height: 48px;
+}
+
+.btn-withicon-large .icon {
+    font-size: 24px;
+    vertical-align: middle;
+    margin-right: 6px;
+}
+
+.btn.btn-260 {
+    box-sizing: border-box;
+    width: 260px;
+}
+
+.btn.btn-160 {
+    box-sizing: border-box;
+    width: 160px;
+}

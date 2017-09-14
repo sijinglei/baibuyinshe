@@ -1,0 +1,120 @@
+@charset"utf-8";
+
+/**
+ * author   : Richa
+ * date     : 2015-09-24
+ */
+
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video, a, input, textarea {
+    margin: 0;
+    padding: 0;
+    border: 0 none;
+    outline: 0 none;
+    vertical-align: baseline;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+html {
+    font-size: 62.5%;
+    height: 100%;
+}
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    color: #333333;
+    background-color: #FFF;
+    font-family: "Ping Fang SC", "STHeiTi", "arial", "Microsoft YaHei", "SimSun", "Georgia", "Times", "Times New Roman", "serif";
+    font-size: 1.4rem;
+    line-height: 1.6;
+}
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after, q:before, q:after {
+    content: '';
+    content: none;
+}
+ins {
+    text-decoration: none;
+}
+mark {
+    color: #F66;
+    font-weight: bold;
+}
+pre{
+   white-space: pre-line; 
+   font-family: "Ping Fang SC", "STHeiTi", "arial", "Microsoft YaHei", "SimSun", "Georgia", "Times", "Times New Roman", "serif"; 
+}
+ul {
+    list-style: none;
+}
+del {
+    text-decoration: line-through;
+}
+a {
+    background: transparent;
+    text-decoration: none;
+    color: #333333;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+textarea, input, select {
+	font-family: "Microsoft Yahei",SimSun,Arial,"Helvetica Neue",Helvetica;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    outline: 0 none;
+}
+textarea {
+	overflow: auto;
+	resize: none;
+}
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0px 1000px white inset;
+}
+::-ms-clear { display: none; }
+::-ms-reveal { display: none; }
+i {
+    font-style: normal;
+}
+b{
+    font-weight: normal;
+}
+[hidefocus], summary {
+    outline: 0;
+}
+img {
+	border: none;
+    vertical-align: middle;
+}
+table,tr,td {
+    border-collapse: separate;
+    border-spacing: 0;
+    margin: 0;
+    padding: 0;
+    border: 0 none;
+    outline: 0;
+    font-weight: inherit;
+    font-style: inherit;
+    font-size: 100%;
+    word-break: break-all;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+tr, td{
+    vertical-align: middle;
+}
+
+input::-webkit-input-placeholder {
+    color: #999;
+}
+input:-moz-placeholder {
+    color: #999;
+}
+input::-moz-placeholder {
+    color: #999;
+}
+input:-ms-placeholder {
+    color: #999;
+}
