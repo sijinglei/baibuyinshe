@@ -8,11 +8,13 @@ var loginAndRegister = {
         this.bindEvent();
     },
     bindEvent: function() {
-        $('.login-box-head').on('click', 'a', function() {
-            var showid = $(this).data('showid');
-            $(this).addClass('actived').siblings().removeClass('actived');
-            $('.login-box-inner').addClass('hide');
-            $(showid).removeClass('hide');
+        var _this = this;
+        //刷新验证码
+        $('.v-code-img').on('click', function() {
+            $(this).attr('src', 'http://dev.bbys.cn/captcha.html?' + Math.random());
         });
+    },
+    login: function() {
+
     }
 };

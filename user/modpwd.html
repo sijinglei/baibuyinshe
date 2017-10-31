@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="/static/css/reset.css">
     <link rel="stylesheet" href="/static/css/table.css">
     <link rel="stylesheet" href="/static/css/common.css">
+    <link rel="stylesheet" href="/static/css/plugins/layer/skin/default/layer.css">
     <link rel="stylesheet" href="/static/css/views/person.css">
     <style>
 
@@ -42,9 +43,9 @@
                         <a href="/file.html" class="actived">文档打印</a>
                         <a href="/photos.html">相片打印</a>
                         <a href="/down/index.html">下载中心</a>
-                        <a href="#">印社地图</a>
-                        <a href="#">用户指南</a>
-                        <a href="#">商务合作</a>
+                        <a href="/map.html">印社地图</a>
+                        <a href="/business.html">用户指南</a>
+                        <a href="/business.html">商务合作</a>
                         <a href="/user/index.html">个人中心</a>
                     </nav>
                 </div>
@@ -94,13 +95,38 @@
                             <div class="media-body-sum">为确保您的帐户安全，建议您设置一个登录密码。</div>
                         </div>
                         <div class="z-operation">
-
-                            <a href="javascript:;" class="z-operation-btn" data-action="updatePassword">修改</a>
+                            <a href="javascript:;" class="z-operation-btn" data-action="updatePassword" id="updatePwdBtn">修改</a>
                         </div>
                     </li>
                 </ul>
             </div>
         </div>
+    </div>
+    <div class="updatepwssword hide">
+        <form id="form_setUserPwd" novalidate="novalidate" class="form-horizontal">
+
+            <div class="form-group form-line-input">
+                <label for="oldpwd" class="control-label">旧密码</label>
+                <input id="oldpwd" class="form-control" name="oldpwd" type="password" maxlength="32" tabindex="1">
+                <span class="help-block"></span>
+            </div>
+            <!-- 用来清除浏览器缓存 -->
+            <input type="text" class="clear-cache">
+
+            <div class="form-group form-line-input">
+                <label for="newpwd" class="control-label">新密码</label>
+                <input id="newpwd" class="form-control" name="newpwd" type="password" maxlength="32" tabindex="20">
+                <span class="help-block"></span>
+            </div>
+            <!-- 用来清除浏览器缓存 -->
+            <input type="text" class="clear-cache">
+
+            <div class="form-group form-line-input">
+                <label for="replaypwd" class="control-label">确认密码</label>
+                <input id="replaypwd" class="form-control" name="replaypwd" type="password" maxlength="32" tabindex="21">
+                <span class="help-block"></span>
+            </div>
+        </form>
     </div>
     <footer class="main-ft" id="main-ft">
         <div class="inner w-1080">
@@ -124,7 +150,8 @@
         </div>
     </footer>
     <script src="/static/js/jquery.min.js"></script>
-    <script src="/static/js/views/person.js"></script>
+    <script src="/static/js/plugins/layer/layer.js"></script>
+    <script src="/static/js/views/set-person.js"></script>
 </body>
 
 </html>

@@ -8,6 +8,7 @@
     <title>相册打印</title>
     <link rel="stylesheet" href="static/css/reset.css">
     <link rel="stylesheet" href="static/css/common.css">
+    <link rel="stylesheet" href="static/css/plugins/layer/skin/default/layer.css">
     <link rel="stylesheet" href="static/css/views/photos.css">
     <style>
 
@@ -28,7 +29,7 @@
                     <nav class="menu">
                         <a href="/login.html">登录</a>
                         <i class="line"></i>
-                        <a href="/register.html">注册</a>
+                        <a href="/reg.html">注册</a>
                         <i class="line"></i>
                         <a class="code-img" href="javascript:;">
                             <img src="static/images/02.png" alt="">
@@ -48,12 +49,12 @@
             <div class="topbar-navbar">
                 <div class="w-1080 clearfix">
                     <nav class="navs">
-                        <a href="/file.html" class="actived">文档打印</a>
-                        <a href="/photos.html">相片打印</a>
+                        <a href="/file.html">文档打印</a>
+                        <a href="/photos.html" class="actived">相片打印</a>
                         <a href="/down/index.html">下载中心</a>
-                        <a href="#">印社地图</a>
-                        <a href="#">用户指南</a>
-                        <a href="#">商务合作</a>
+                        <a href="/map.html">印社地图</a>
+                        <a href="/business.html">用户指南</a>
+                        <a href="/business.html">商务合作</a>
                         <a href="/user/index.html">个人中心</a>
                     </nav>
                 </div>
@@ -72,7 +73,7 @@
                                 <ul class="clearfix">
                                     <li>
                                         <div class="photo-item">
-                                            <img src="static/images/default.png" alt="">
+                                            <img src="static/images/222.jpg" alt="">
                                         </div>
                                         <div class="photo-content">
                                             <p class="title">image123123</p>
@@ -84,7 +85,7 @@
                                     </li>
                                     <li>
                                         <div class="photo-item">
-                                            <img src="static/images/default.png" alt="">
+                                            <img src="static/images/111.jpg" alt="">
                                         </div>
                                         <div class="photo-content">
                                             <p class="title">image123123</p>
@@ -96,7 +97,7 @@
                                     </li>
                                     <li>
                                         <div class="photo-item">
-                                            <img src="static/images/default.png" alt="">
+                                            <img src="static/images/222.jpg" alt="">
                                         </div>
                                         <div class="photo-content">
                                             <p class="title">image123123</p>
@@ -170,12 +171,13 @@
                                 </div>
                             </div>
 
-                            <div class="form-group clearfix">
+                            <div class="form-group clearfix" style="padding-left:15px;">
                                 <label class="label-control">
                                    <i class="fa fa-address"></i> 取件地址：
                                 </label>
-                                <div class="text-control">
-                                    <span class="info">布吉慢城4期1栋</span>
+                                <div class="text-control" style="width:690px;">
+                                    <span class="info address-info">布吉慢城4期1栋</span>
+                                    <a href="/index.html?type=update"><i class="fa fa-update-adress"></i> 修改取件地址</a>
                                     <i class="line"></i>
                                     <a href=""><i class="fa fa-map"></i> 地图位置</a>
                                     <i class="line"></i>
@@ -184,8 +186,8 @@
                             </div>
 
                             <div class="submit-wrap clearfix">
-                                <a href="javascript:;" class="btn btn-blue">继续上传</a>
-                                <a href="javascript:;" class="btn btn-orge">确认订单</a>
+                                <a href="javascript:;" class="btn btn-blue btn-upload" id="btnPhotoUpload">继续上传</a>
+                                <a href="javascript:;" class="btn btn-orge btn-ok">确认订单</a>
                             </div>
 
                         </div>
@@ -195,6 +197,151 @@
             <img src="static/images/51.png" class="right-bg fr" alt="">
         </div>
     </div>
+
+    <!--图片上传弹出层样式-->
+    <div id="layer-wrap" style="display:none;">
+        <div class="row">
+            <div class="btn-wrap">
+                <a href="javascript:;" class="btn btn-orge btn-choose">选择照片</a>
+                <a href="javascript:;" class="btn btn-orge btn-ok">开始上传</a>
+            </div>
+            <div class="layphoto-list">
+                <ul>
+                    <li>
+                        <div class="media-img">
+                            <img src="static/images/photo1.png" alt="">
+                        </div>
+                        <div class="media-action" data-id="2">
+                            <a href="javascript:;" class="fa-btn fa-btn-edit">
+                                编辑
+                            </a>
+                            <a href="javascript:;" class="fa-btn fa-btn-del">
+                                删除
+                            </a>
+                            <span class="proess">
+                                上传中
+                            </span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="media-img">
+                            <img src="static/images/test.png" alt="">
+                        </div>
+                        <div class="media-action" data-id="2">
+                            <a href="javascript:;" class="fa-btn fa-btn-edit">
+                                编辑
+                            </a>
+                            <a href="javascript:;" class="fa-btn fa-btn-del">
+                                删除
+                            </a>
+                            <span class="proess ok">
+                                上传失败
+                            </span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="media-img">
+                            <img src="static/images/photo1.png" alt="">
+                        </div>
+                        <div class="media-action" data-id="3">
+                            <a href="javascript:;" class="fa-btn fa-btn-edit">
+                                编辑
+                            </a>
+                            <a href="javascript:;" class="fa-btn fa-btn-del">
+                                删除
+                            </a>
+                            <span class="proess">
+                                上传中
+                            </span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="media-img">
+                            <img src="static/images/photo1.png" alt="">
+                        </div>
+                        <div class="media-action" data-id="4">
+                            <a href="javascript:;" class="fa-btn fa-btn-edit">
+                                编辑
+                            </a>
+                            <a href="javascript:;" class="fa-btn fa-btn-del">
+                                删除
+                            </a>
+                            <span class="proess">
+                                上传中
+                            </span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="media-img">
+                            <img src="static/images/photo1.png" alt="">
+                        </div>
+                        <div class="media-action" data-id="5">
+                            <a href="javascript:;" class="fa-btn fa-btn-edit">
+                                编辑
+                            </a>
+                            <a href="javascript:;" class="fa-btn fa-btn-del">
+                                删除
+                            </a>
+                            <span class="proess">
+                                上传中
+                            </span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!--图片编辑弹出层样式-->
+    <div id="edit-wrap" style="display:none;">
+        <div class="img-edit-wrap">
+            <div class="edit-left fl">
+                <img src="static/images/photo1.png" alt="">
+            </div>
+            <div class="edit-right fr">
+                <div class="img img1"> <img src="static/images/photo1.png" alt=""></div>
+                <div class="img img2"> <img src="static/images/photo1.png" alt=""></div>
+                <div class="img img3"> <img src="static/images/photo1.png" alt=""></div>
+            </div>
+        </div>
+        <div class="img-edit-btn">
+            <span class="icon-btn icon-roll"></span>
+            <span class="icon-btn icon-suoxiao"></span>
+            <span class="icon-btn icon-fangda"></span>
+            <a href="javascript:;" class="fa-btn-return">
+                    还原
+                </a>
+            <a href="javascript:;" class="fa-btn-submit">
+                    提交
+                </a>
+        </div>
+    </div>
+    <!--确认订单-->
+    <div id="order-wrap" style="display:none;">
+        <div class="order-info">
+            <div class="label-grounp">
+                <label class="label-control">订单金额：</label>
+                <div class="text-control"><span class="txt-color">6.5</span>元</div>
+            </div>
+            <div class="label-grounp">
+                <label class="label-control">积分抵扣：</label>
+                <div class="text-control"><span class="txt-color">6.5</span>元</div>
+            </div>
+            <div class="label-grounp">
+                <label class="label-control">应付金额：</label>
+                <div class="text-control"><span class="txt-color">6.5</span>元</div>
+            </div>
+            <div class="label-grounp">
+                <label class="label-control">您的账户余额：</label>
+                <div class="text-control"><span class="txt-color">6.5</span>元</div>
+            </div>
+        </div>
+        <div class="submit-wrap">
+            <a href="javascript:;" class="btn btn-orge" id="surePay">
+                   确认支付
+                </a>
+        </div>
+    </div>
+
     <footer class="main-ft" id="main-ft">
         <div class="inner w-1080">
             <div class="contact">
@@ -217,6 +364,7 @@
         </div>
     </footer>
     <script src="static/js/jquery.min.js"></script>
+    <script src="static/js/plugins/layer/layer.js"></script>
     <script src="static/js/views/photo.js"></script>
 </body>
 

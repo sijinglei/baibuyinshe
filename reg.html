@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>登录</title>
+    <link rel="stylesheet" href="static/css/reset.css">
+    <link rel="stylesheet" href="static/css/common.css">
+    <link rel="stylesheet" href="static/css/plugins/layer/skin/default/layer.css">
+    <link rel="stylesheet" href="static/css/views/login.css">
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <header class="head in-page">
+        <div class="body">
+            <div class="logo"><img src="static/images/logo.png" class="logo"></div>
+            <div class="user">
+                <div class="logged ">
+                    <a href="/">返回产品首页 ></a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="container">
+        <div class="w-1080 login-bg" style="background-image:url(static/images/login-bg2.png)">
+            <div class="login-box">
+                <header class="login-box-head">
+                    <a href="login.html" id="loginBtn">登录</a>
+                    <a href="reg.html" id="registerBtn" class="actived">注册</a>
+                </header>
+                <div class="login-box-inner" id="register-wrap">
+                    <form id="form-register">
+                        <div class="form-group">
+                            <input type="text" name="account" class="form-control" id="register-mobile" placeholder="注册手机号" maxlength="11" tabindex="1">
+                            <i class="icon-16 i16-3-0"></i>
+                            <i class="icon-16 i16-3-1"></i>
+                            <span class="help-block"></span>
+                        </div>
+
+                        <!-- <div class="v-code-wrap">
+                            <div class="form-group">
+                                <input type="text" name="vcode" id="register-vcode" class="form-control" placeholder="图形验证码" maxlength="4" tabindex="2">
+                                <i class="icon-16 i16-3-0"></i>
+                                <i class="icon-16 i16-3-1"></i>
+                                <span class="help-block"></span>
+                            </div>
+                            <img src="http://dev.bbys.cn/captcha.html" class="v-code-img" title="点击刷新验证码">
+                        </div> -->
+
+                        <div class="v-code-wrap">
+                            <div class="form-group">
+                                <input type="text" name="smscode" id="register-sendSms" class="form-control" placeholder="短信验证码" maxlength="6" tabindex="3">
+                                <i class="icon-16 i16-3-0"></i>
+                                <i class="icon-16 i16-3-1"></i>
+                                <span class="help-block"></span>
+                            </div>
+                            <a href="javascript:;" class="get-smscode" id="register-getsmscode">获取验证码</a>
+                        </div>
+
+                        <!-- 用来清除浏览器缓存 -->
+                        <input type="text" class="clear-cache">
+
+                        <div class="form-group">
+                            <input type="password" name="password" class="form-control" id="register-pwd" placeholder="登录密码，6-20个字符，不能使用纯数字" maxlength="20" tabindex="4">
+                            <i class="icon-16 i16-3-0"></i>
+                            <i class="icon-16 i16-3-1"></i>
+                            <span class="help-block"></span>
+                        </div>
+
+                        <div class="agree-box">
+                            <label>
+								<input type="checkbox" id="agree" checked="checked">
+								<span>我已阅读并同意<a id="register-agreement" href="javascript:;">《百步印社协议》《隐私政策》</a></span>
+							</label>
+                        </div>
+                        <a href="javascript:;" class="submit" id="submit-register" style="margin-top:20px;">注册</a>
+                    </form>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+    <footer class="main-ft" id="main-ft">
+        <div class="inner w-1080">
+            <div class="contact">
+                <div class="imglist">
+                    <a href=""><img src="static/images/18.png" alt=""></a>
+                    <a href=""><img src="static/images/19.png" alt=""></a>
+                    <a href=""><img src="static/images/20.png" alt=""></a>
+                </div>
+                <div class="links">
+                    <a target="_blank" href="https://www.bbys.com">百步印社</a>
+                    <span>联系电话：13510211086</span>
+                </div>
+            </div>
+            <div class="links copyright">
+                <span>版权所有 © 2017-2017 百步印社</span>&nbsp;
+                <a target="_blank" href="http://www.miibeian.gov.cn">粤ICP 备xxxx号</a>
+            </div>
+
+
+        </div>
+    </footer>
+    <script src="static/js/jquery.min.js"></script>
+    <script src="static/js/plugins/layer/layer.js"></script>
+    <script src="static/js/common.js"></script>
+    <script src="static/js/views/reg.js"></script>
+</body>
+
+</html>

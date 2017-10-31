@@ -1,0 +1,46 @@
+ <div class="wrap com-width w-1080">
+         {$qr_code_recharge}
+         <span style="display:block; margin-left: 20px;font-size:18px;">充值二维码，用微信扫一扫</span>
+        <form id="myfrm" method='post' action="" name='myfrm'>
+        <div><input type='hidden' name='bank_code' id='bank_code' value="account" /><br/> 
+        <input type='hidden' name='bank_name' id='bank_name' value="虚拟充值" /><br/> 
+        <span style="display:block; margin-left: 20px;">
+            充值金额：<input type='text' style="width:50px;"  name='amount' id='amount' value=100 />
+            <button id='btnOK' type="submit" class="hide">微信充值</button>&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;<button id='btnOK2'>虚拟充值</button>  
+        </span>
+        </div> 
+        </form>
+        <br/>
+        <button id='btnOK3' type="button" class="hide">生成5元充值二维码</button>  
+        <br/>
+        <img id='qrcode_img' src='' />
+ </div>
+
+<script>
+    $("#btnOK2").click(function(){
+        $("#bank_code").val("account");
+        $("#bank_name").val("虚拟充值");
+        $("#myfrm").submit();
+    });
+     $("#btnOK3").click(function(){
+    $.ajax({
+			type : 'post',
+			url : '{:url("index/api/get_recharge_qrcode")}',
+			data : {"token":"","amount":5},
+			dataType : 'json',
+			success : function(res){
+				if(res.status == 1){
+					$('#qrcode_img').attr("src",'/index/index/qr_code?data='+res.result.qr_code); 
+				}else{
+					showErrorMsg(res.msg);
+					//verify();
+				}
+			},
+			error : function(XMLHttpRequest, textStatus, errorThrown) {
+				showErrorMsg('网络失败，请刷新页面后重试');
+			}
+		})
+                });
+</script>
+ 
+        

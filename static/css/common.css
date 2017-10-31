@@ -975,7 +975,7 @@ p.no-bind {
 
 .form-group {
     font-size: 14px;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
 }
 
 .form-group .label-control {
@@ -1008,8 +1008,14 @@ p.no-bind {
     padding: 2px;
 }
 
-.form-group .info {
+.form-group .info,
+.address-info {
     color: #cdcdcd;
+}
+
+.form-group .address-info {
+    display: block;
+    padding-top: 2px;
 }
 
 .fa {
@@ -1032,6 +1038,12 @@ p.no-bind {
     width: 15px;
     height: 18px;
     background-image: url('../images/43.png');
+}
+
+.fa-update-adress {
+    width: 15px;
+    height: 18px;
+    background-image: url('../images/43_1.png');
 }
 
 .fa-map {
@@ -1080,4 +1092,40 @@ p.no-bind {
 .btn-orge:hover {
     color: #fff;
     background-color: #FF6E3F;
+}
+
+::-webkit-scrollbar-track-piece {
+    background-color: #f8f8f8;
+}
+
+ ::-webkit-scrollbar {
+    width: 9px;
+    height: 9px;
+}
+
+ ::-webkit-scrollbar-thumb {
+    background-color: #dddddd;
+    background-clip: padding-box;
+    min-height: 28px;
+}
+
+ ::-webkit-scrollbar-thumb:hover {
+    background-color: #bbb;
+}
+
+.code-img {
+    position: relative;
+}
+
+.code-img:hover::after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    background: url('/static/images/app.png') no-repeat;
+    background-size: cover;
+    top: 50px;
+    right: 0;
+    z-index: 999;
 }

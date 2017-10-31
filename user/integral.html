@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="/static/css/reset.css">
     <link rel="stylesheet" href="/static/css/table.css">
     <link rel="stylesheet" href="/static/css/common.css">
+    <link rel="stylesheet" href="/static/css/plugins/t-paginator.css">
     <link rel="stylesheet" href="/static/css/views/person.css">
     <style>
 
@@ -42,9 +43,9 @@
                         <a href="/file.html" class="actived">文档打印</a>
                         <a href="/photos.html">相片打印</a>
                         <a href="/down/index.html">下载中心</a>
-                        <a href="#">印社地图</a>
-                        <a href="#">用户指南</a>
-                        <a href="#">商务合作</a>
+                        <a href="/map.html">印社地图</a>
+                        <a href="/business.html">用户指南</a>
+                        <a href="/business.html">商务合作</a>
                         <a href="/user/index.html">个人中心</a>
                     </nav>
                 </div>
@@ -78,10 +79,36 @@
         </div>
         <div class="right-wrap fl">
             <div class="right-head">
-                <p>我的积分</p>
+                <p>积分详情</p>
             </div>
             <div class="setting-box">
-
+                <div class="setting-table">
+                    <table class="table" id="table-list">
+                        <thead>
+                            <tr>
+                                <th>积分</th>
+                                <th>业务类别</th>
+                                <th>提交时间</th>
+                                <th>备注</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>100</td>
+                                <td>登录签到</td>
+                                <td>2017-02-15 09:50:40</td>
+                                <td>450</td>
+                            </tr>
+                            <tr>
+                                <td>200</td>
+                                <td>注册</td>
+                                <td>2017-02-15 09:50:40</td>
+                                <td>450</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="page-list" id="page" style="clear:both"></div>
             </div>
         </div>
     </div>
@@ -107,7 +134,8 @@
         </div>
     </footer>
     <script src="/static/js/jquery.min.js"></script>
-    <script src="/static/js/views/person.js"></script>
+    <script src="/static/js/plugins/t-paginator.js"></script>
+    <script src="/static/js/views/set-integral.js"></script>
 </body>
 
 </html>

@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="/static/css/reset.css">
     <link rel="stylesheet" href="/static/css/table.css">
     <link rel="stylesheet" href="/static/css/common.css">
+    <link rel="stylesheet" href="/static/css/plugins/t-paginator.css">
     <link rel="stylesheet" href="/static/css/views/person.css">
     <style>
 
@@ -42,9 +43,9 @@
                         <a href="/file.html" class="actived">文档打印</a>
                         <a href="/photos.html">相片打印</a>
                         <a href="/down/index.html">下载中心</a>
-                        <a href="#">印社地图</a>
-                        <a href="#">用户指南</a>
-                        <a href="#">商务合作</a>
+                        <a href="/map.html">印社地图</a>
+                        <a href="/business.html">用户指南</a>
+                        <a href="/business.html">商务合作</a>
                         <a href="/user/index.html">个人中心</a>
                     </nav>
                 </div>
@@ -77,11 +78,48 @@
             </div>
         </div>
         <div class="right-wrap fl">
-            <div class="right-head">
-                <p>我的钱包</p>
+            <div class="right-head pb-5">
+                <div class="tabbar fl">
+                    <ul id="walletTab">
+                        <li class="actived"><a href="javascript:;" data-type="1">充值记录</a></li>
+                        <li><a href="javascript:;" data-type="2">消费记录</a></li>
+                        <li><a href="javascript:;" data-type="3">退款记录</a></li>
+                    </ul>
+                </div>
+                <div class="tabbar-tip">
+                    <p>
+                        累计充值：<span class="txt-color">20000</span> 累计赠送：<span class="txt-color">300</span> 累计消费：<span class="txt-color">4000</span><a href="javascript:;">我要充值</a>
+                    </p>
+                </div>
             </div>
             <div class="setting-box">
-
+                <div class="setting-table">
+                    <table class="table" id="table-list">
+                        <thead>
+                            <tr>
+                                <th>单号</th>
+                                <th>金额</th>
+                                <th>方式</th>
+                                <th>提交时间</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>2017090600001</td>
+                                <td>18.5</td>
+                                <td>字段字段</td>
+                                <td>2017-02-15 09:50:40</td>
+                            </tr>
+                            <tr>
+                                <td>2017090600001</td>
+                                <td>18.5</td>
+                                <td>字段字段</td>
+                                <td>2017-02-15 09:50:40</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="page-list" id="page" style="clear:both"></div>
             </div>
         </div>
     </div>
@@ -107,7 +145,8 @@
         </div>
     </footer>
     <script src="/static/js/jquery.min.js"></script>
-    <script src="/static/js/views/person.js"></script>
+    <script src="/static/js/plugins/t-paginator.js"></script>
+    <script src="/static/js/views/set-wallet.js"></script>
 </body>
 
 </html>

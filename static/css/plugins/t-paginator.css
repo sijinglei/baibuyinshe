@@ -16,24 +16,29 @@
     display: none;
 }
 
-.t-paginator a, .t-paginator .t-current {
+.t-paginator a,
+.t-paginator .t-current {
     display: inline-block;
     color: #666;
     margin: 0 5px;
-    padding: 6px 10px;
-    text-align:center;
+    padding: 5px 10px;
+    text-align: center;
     vertical-align: baseline;
-    background-color: #FFF;
-    border: 1px solid #CCC;
+    background: rgba(0, 0, 0, 0.06);
+    border-radius: 2px;
+    /* background-color: #FFF;
+    border: 1px solid #CCC; */
 }
-.t-paginator .t-current ,.t-paginator  .t-page-num{
-    min-width: 36px
+
+.t-paginator .t-current,
+.t-paginator .t-page-num {
+    min-width: 34px
 }
 
 .t-paginator .t-current {
-    background-color: #329BFF;
     color: #fff;
-    border: 1px solid #329BFF;
+    background-color: #FF6E3F;
+    border-radius: 2px;
 }
 
 .t-paginator a:hover {
@@ -46,11 +51,11 @@
 }
 
 .t-paginator a.t-disabled:hover {
-   background-color: #ddd;
+    background-color: rgba(0, 0, 0, 0.06);
 }
 
 .t-paginator .t-paginator-dot {
     display: inline-block;
-    font-size: 20px;
+    font-size: 14px;
     margin: 0 5px;
 }

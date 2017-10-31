@@ -38,14 +38,6 @@
                         <a class="code-img" href="javascript:;">
                             <img src="static/images/02.png" alt="">
                         </a>
-                        <!-- <div class="t-dropdown" id="msg-channel" data-mode="2">
-                            <a href="/person" class="t-dropdown-btn"><span>我的</span><i class="icon icon-arrow_triangle_down"></i></a>
-                            <nav class="t-dropdown-content">
-                                <a href="/person#/msg">个人中心</a>
-                                <a href="/person#/rePass">修改密码</a>
-                                <a href="/logOut">退出登录<span class="iconfont icon-tuichudenglu"></span></a>
-                            </nav>
-                        </div> -->
                     </nav>
                 </div>
             </div>
@@ -53,26 +45,24 @@
             <div class="topbar-navbar">
                 <div class="w-1080 clearfix">
                     <nav class="navs">
-                        <a href="/file.html" class="actived">文档打印</a>
-                        <a href="/photos.html">相片打印</a>
-                        <a href="/down/index.html">下载中心</a>
-                        <a href="#">印社地图</a>
-                        <a href="#">用户指南</a>
-                        <a href="#">商务合作</a>
-                        <a href="/user/index.html">个人中心</a>
+                        <a href="file.html" class="actived">文档打印</a>
+                        <a href="photos.html">相片打印</a>
+                        <a href="down/index.html">下载中心</a>
+                        <a href="map.html">印社地图</a>
+                        <a href="business.html">用户指南</a>
+                        <a href="business.html">商务合作</a>
                     </nav>
                 </div>
             </div>
         </div>
     </header>
-
-
     <div class="container">
         <div class="w-1080">
             <div id="fullpage">
                 <div class="section page-1">
                     <div class="page-wrpa">
-                        <div class="slide">
+                        <div class="side">
+                            <img src="static/images/46.png" class="img-bg" alt="">
                             <div class="btn-wrap">
                                 <a href="javascript:;" class="btn btn-default btn-moveright">查找附近打印设备</a>
                                 <p class="text">在上传文件前，确定你将要取件的打印设备该设备会预先准备好文件，减少取件的时间。</p>
@@ -83,15 +73,15 @@
                             <div class="left-wrap fl">
                                 <img class="top-img" src="static/images/47.png" alt="">
                                 <div class="tab-bar">
-                                    <a href="javascript:;" class="actived">
+                                    <a href="javascript:;" class="actived" data-type="1">
                                         <i class="fa fa-fujin"></i> 附近设备
                                     </a>
                                     <i class="line"></i>
-                                    <a href="javascript:;">
+                                    <a href="javascript:;" data-type="2">
                                         <i class="fa fa-cy"></i> 常用设备
                                     </a>
                                     <i class="line"></i>
-                                    <a href="javascript:;">
+                                    <a href="javascript:;" data-type="3">
                                         <i class="fa fa-map"></i> 地图查找
                                     </a>
                                 </div>
@@ -225,63 +215,32 @@
                                             </ul>
                                         </div>
                                         <p class="text-center">
-                                            <a href="JavaScript:;" class="btn-step">下一步</a>
+                                            <a href="/file.html" class="btn-step">下一步</a>
                                         </p>
                                     </div>
-
                                 </div>
-
                             </div>
                             <img src="static/images/48.png" class="right-bg" alt="">
-                            <a href="javascript:;" class="btn-cirle"></a>
                         </div>
+                        <a href="javascript:;" class="btn-cirle"></a>
                     </div>
-
                 </div>
                 <div class="section page-2">
                     <div class="page-wrpa">
-                        <div class="btn-wrap">
-                            <a href="javascript:;" class="btn btn-default btn-moveright">点击上传文档</a>
-                            <p class="text">文档上传支持doc,docx,xls,xlsx,ppt,pptx,jpg,png,jpeg格式，更多问题点击此处查看帮助。</p>
-                        </div>
-                        <div class="page-form">
-                            <div class="left-wrap fl">
-                                <img class="top-img" src="static/images/50.png" alt="">
-
-                                <div class="page-content">
-                                    <table class="table table-bordered">
-                                        <thead>
-                                            <tr>
-                                                <th>序号</th>
-                                                <th>文档名称</th>
-                                                <th>单双面</th>
-                                                <th>颜色</th>
-                                                <th>打印范围</th>
-                                                <th>打印份数</th>
-                                                <th>纸张数</th>
-                                                <th>金额</th>
-                                                <th>操作</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <td>1</td>
-                                                <td>2</td>
-                                                <td>3</td>
-                                                <td>4</td>
-                                                <td>5</td>
-                                                <td>6</td>
-                                                <td>7</td>
-                                                <td>8</td>
-                                                <td>9</td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-
+                        <div class="side">
+                            <img src="static/images/49.png" class="img-bg" alt="">
+                            <div class="btn-wrap">
+                                <a href="file.html" class="btn btn-default btn-upload">点击上传文档</a>
+                                <p class="text">文档上传支持doc,docx,xls,xlsx,ppt,pptx,jpg,png,jpeg格式，更多问题点击此处查看帮助。</p>
+                                <p class="point"><span></span></p>
                             </div>
-                            <img src="static/images/51.png" class="right-bg" alt="">
-                            <a href="javascript:;" class="btn-cirle"></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="section page-2">
+                    <div class="page-wrpa">
+                        <div class="side">
+                            <img src="static/images/52.png" class="img-bg" alt="">
                         </div>
                     </div>
                 </div>
@@ -306,8 +265,6 @@
                 <span>版权所有 © 2017-2017 百步印社</span>&nbsp;
                 <a target="_blank" href="http://www.miibeian.gov.cn">粤ICP 备xxxx号</a>
             </div>
-
-
         </div>
     </footer>
     <script src="static/js/jquery.min.js"></script>
